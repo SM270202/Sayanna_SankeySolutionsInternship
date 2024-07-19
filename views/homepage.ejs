@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Hotel Booking Website" content="This is the homepage of our hotel booking site">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/welcomepage.css" />
+    <script src="subscribeemail.js"></script>
+    <title><%= title %></title>
+</head>
+<body>
+    <header>
+        <div class="searchbar" style="max-width:100%;max-height: max-content;">
+                    <img src="/images/websitelogo.png" alt="logo" class="logo">
+                    <input type="text" placeholder="Search..." >
+                    <button class="searchbutton poppins-bold" aria-label="Searchbutton"><span><img src="/images/search.png" style="min-width: fit-content;min-height: fit-content;" alt="Searchbutton"></span></button>
+                       <a href="#" class="smalllogo"><img src="/images/England.png" alt="Country"  class="smallicon" ></a>
+                       <a href="#" class="smalllogo"><img src="/images/Dollars.png" alt="Price" class="smallicon" ></a>
+                       <a href="#" class="smalllogo"><img src="/images/Help.png" alt="Help" class="smallicon" ></a>
+                       <a href="#" class="smalllogo"><img src="/images/Favorite.png" alt="Favourites" class="smallicon" ></a>
+                       <a href="#" class="smalllogo"><img src="/images/Phone.png" alt="Contacts" class="smallicon" ></a>
+                       <a href="#" class="smalllogo"><img src="/images/Photo.svg" alt="User Account"  class="smallicon"></a> 
+        </div>
+            <br>
+        <div class="center">
+
+                <ul class="Style">
+                    <li class="buttonsheader poppins-regular">Trip</li>
+                    <li class="buttonsheader poppins-regular">% Deals</li>
+                    <li class="buttonsheader poppins-regular">Hotel</li>
+                    <li class="buttonsheader poppins-regular">Flight</li>
+                    <li class="buttonsheader poppins-regular">Apartment</li>
+                    <li class="buttonsheader poppins-regular">Camper</li>
+                </ul>
+        </div>
+        <br><br>
+        <div class="belowheader">
+            <div class="contentblue1 ">
+               <div> <h2 class = 'poppins-bold' style="font-size: 1.5em; line-height: 2.1em;">Where is Your Next Dream Place?</h2></div>
+               <div><p class ="poppins-regular" >Find exclusive Genius rewards in every corner of the world!</p></div>
+            </div><br>
+            <form class="formcontainer", action='/gethotel' , method="get" style="display:flex; align-items: center;">
+                <span>
+                    <label><strong class="poppins-bold" style="font-size: 0.875em;line-height: 1.225em;">Place</strong></label><br>
+                    <input type="text" placeholder="Gutenberg" class="searchcities poppins-light" style="max-width:17.18vw; max-height: 7.67vh; border:0.125em; padding:1em; gap:0.5em; border:solid #a6a6a6">
+                </span>
+                <span>
+                    <label><strong class="poppins-bold" style="font-size: 0.875em;line-height: 1.225em;">VIP</strong></label><br>
+                    <select class="searchcities poppins-light" style="width:17.18vw; height: 7.67vh; border:0.125em; padding:1em; gap:0.5em;border:solid #a6a6a6" aria-label="VIP selection">
+                        <option value="Longlasting" selected>Long Lasting</option>
+                    </select>
+                </span>
+                <span>
+                    <span style="overflow:scroll;text-overflow:ellipsis;font-size: 0.875em;line-height: 1.225em;" class="poppins-bold" >Passengers-Room </span><br>
+                    <select class="searchcities poppins-light" style="width:17.18vw; height: 7.67vh; border:0.125em; padding:1em; gap:0.5em;border:solid #a6a6a6" aria-label="Type of Room">
+                        <option value="Adults-Children      Rooms" selected>"Adults-Children      Rooms" </option>
+                    </select>
+                </span>
+                    <span>
+                    <label style="overflow:hidden;text-overflow:ellipsis;font-size: 0.875em;line-height: 1.225em;text-wrap: wrap;"><span class="poppins-bold">Check In-Check Out</span></label><br>
+                    <input type="date" placeholder="DD/MM/YYYY" class="searchcities poppins-light" style="width:17.18vw; height: 7.67vh; border:0.125em; padding:1em; gap:0.5em;border:solid #a6a6a6">
+                </span>
+                <button class="poppins-bold searchbutton2">Search</button>
+            </form><br>
+         </div>
+    </header>
+    <div >
+        <div class="searchhotelbanner">
+        <img src="/images/search hotel banner.jpeg" alt="search hotel banner">
+    <span class="centered poppins-bold">Why Choose Us?
+    </span><br>
+    <button class="exploremore poppins-regular">Explore More ></button><br>
+    <span class="centeredbottom poppins-light">
+        Exclusive Hotel Search!
+    </span><br>
+</div>
+    </div>
+    <ul class="Styles" style="flex-direction:row;justify-content: space-evenly;">
+        <li class="searchamenities2 poppins-bold " style="padding: 1.25em;">Special Offer</li>
+        <li class="searchamenities2 poppins-bold " style="padding: 1.25em;" >Last Search</li>
+        <li class="searchamenities2 poppins-bold " style="padding: 1.25em;" >Trending Destination</li>
+        <li class="searchamenities2 poppins-bold " style="padding: 1.25em;" >Highest Reviewed</li>
+        <li class="searchamenities2 poppins-bold " style="padding: 1.25em;" >Highest Reviewed</li>
+    </ul>
+    <section>
+        <div class="worldbanner" >
+            <img src="/images/world.jpeg" alt="world">
+                <div class="topleft">
+                    <div class="minicards" style="display:flex;flex-direction:row;">
+                        <div>
+                            <img src="/images/11 (1).svg" alt="Belgium" class="image">
+                        </div>
+                    <div>
+                    <div class="content2">
+                        <strong class="poppins-bold" style="font-size:1em;line-height: 1.4em ;">Belgium</strong>
+                        <p class="poppins-light" style="font-size: 0.6em;line-height: 0.87em;">Bruxelles Gare du Midi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="topright">
+            <div class="minicards" style="display:flex;flex-direction:row;">
+                <div>
+                    <img src="/images/11 (2).svg" alt="Gothenburg" class="image">
+                </div>
+                <div>
+                    <div class="content2">
+                        <strong class="poppins-bold" style="font-size:1em;line-height: 1.4em ;">Gothenburg</strong>
+                        <p class="poppins-light" style="font-size:0.6em;line-height: 0.87em ;">First Hotel G</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="centeredi">
+            <div class="minicards" style="display:flex;flex-direction:row;">
+                <div>
+                    <img src="/images/11 (3).svg" alt="Amsterdam" class="image">
+                </div>
+                <div>
+                    <div class="content2">
+                        <strong class="poppins-bold"style="font-size:1em;line-height: 1.4em ;">Amsterdam</strong>
+                        <p class="poppins-light"style="font-size:0.6em;line-height: 0.87em ;">Bunk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomleft">
+            <div class="minicards" style="display:flex;flex-direction:row;">
+                <div>
+                    <img src="/images/11 (4).svg" alt="New Jersey" class="image">
+                </div>
+                <div>
+                    <div class="content2">
+                        <strong class="poppins-bold"style="font-size:1em;line-height: 1.4em ;">New Jersey</strong>
+                        <p class="poppins-light"style="font-size:0.6em;line-height: 0.87em ;">Windsor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomright">
+            <div class="minicards" style="display:flex;flex-direction:row;">
+                <div>
+                    <img src="/images/11 (5).svg" alt="Nepal" class="image">
+                </div>
+                <div>
+                    <div class="content2">
+                        <strong class="poppins-bold"style="font-size:1em;line-height: 1.4em ;">Nepal</strong>
+                        <p class="poppins-light"style="font-size:0.6em;line-height: 0.87em ;">Hyatt Regency K.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+    <section>
+        <p style=" margin-right:10% ; margin-left:10%;display:flex;justify-content:flex-start;"><strong class="poppins-bold"style="font-size:32px;line-height: 44.8px ;">Special Offers:</strong></p> 
+            <div class="grid">
+            <div class="grid-item">
+                <img src="/images/grid1.jpeg" alt="Image1">
+                <div class="gridbox poppins-medium">
+                    Loyalty Discounts
+                </div>
+            </div>
+            <div class="grid-item2">
+                <img src="/images/grid2.jpeg" alt="image2">
+                <div class="gridbox poppins-medium">
+                    Early Booking Discounts
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="/images/grid3.jpeg" alt="image3">
+                <div class="gridbox poppins-medium">
+                    Last-Minute Deals
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="/images/grid4.jpeg" alt="image4">
+                <div class="gridbox poppins-medium">
+                    Family Packages
+                </div>
+            </div>
+            <div class="grid-item2">
+                <img src="/images/grid5.jpeg" alt="image5">
+                <div class="gridbox poppins-medium" >
+                    Birthday or Anniversary Specials
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="/images/grid6.jpeg" alt="image6">
+                <div class="gridbox poppins-medium">
+                    Referral Programs
+                </div>
+            </div>
+        </div>
+        <p><strong class="poppins-bold" style="font-size:2em;line-height:2.8em ;margin-right:10% ; margin-left:10%;display:flex;justify-content:flex-start;">Make a Comparison:</strong></p>
+        <div class="grid">
+            <div class="grid-item1">
+                <img src="/images/grid21.jpeg" alt="image21">
+                <div class="gridbox1 poppins-bold">
+                    <p>The past offers with the highest reviews outshine others, standing as a testament to their exceptional quality.</p>
+                </div>
+            </div>
+            <div class="grid-item1">
+                <img src="/images/grid 22.jpeg" alt="image22">
+                <div class="gridbox1 poppins-bold">
+                    <p>Ring in the new year with iconic moments and unforgettable memories in New York City.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="seabeach">
+            <img src="/images/seabeach.jpeg" alt="Seabeach">
+                <div style="display:flex;flex-direction: row;justify-content: space-evenly;">
+                    <div class="centerleft">
+                    <div class="circleimage">
+                        <img src="/images/girlphoto.svg" alt="user1">
+                    </div>
+                    <div class="circularcontent">
+                       <span class="poppins-regular" style="font-size: 1em; line-height:1.4em ;">Teacher Terece</span><br>
+                       <span class="poppins-light" style="font-size: 0.75em; line-height:1.05em ;">Returning to this hotel is always a delight – their loyalty program showers us with exclusive discounts and amazing perks!</span> <br>
+                    </div><br>
+                </div>
+                <div class="centermiddle">
+                    <div class="circleimage">
+                        <img src="/images/Photo (1).svg" alt="User2">
+                    </div>
+                    <div class="circularcontent">
+                        <span class="poppins-regular"style="font-size: 1em; line-height:1.4em ;">BEYU68£</span><br>
+                        <span class="poppins-light"style="font-size: 0.75em; line-height:1.05em ;">Accessing EasySet24 extraordinary special offers makes always our journey even more unforgettable.</span><br>
+                    </div>
+                </div>
+                <div class="centerright">
+                    <div class="circleimage">
+                        <img src="/images/Photo (2).svg" alt="user3">
+                    </div>
+                    <div class="circularcontent">
+                        <span class="poppins-regular"style="font-size: 1em; line-height:1.4em ;">Elina13ay </span><br>
+                        <span class="poppins-light"style="font-size: 0.75em; line-height:1.05em ;">Weekends here are pure bliss with their carefully crafted packages, and the extended stay discounts make relaxation even more enticing.</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+    <div class="grid">
+        <div class="grid-item1">
+            <img src="/images/grid31.jpeg" alt="image31">
+            <div class="gridbox1" style="background-color:rgba(0,0,0,0.5);text-align: left;">
+                <strong class="poppins-bold">Reserve Your hotel, Pursue Your Team</strong>
+            </div>
+        </div>
+        <div class="grid-item1">
+            <img src="/images/grid32.jpeg" alt="image32">
+            <div class="gridbox1" style="background-color: rgba(0,0,0,0.5);text-align: left;">
+                <strong class="poppins-bold">Subscribe Our Newsletter</strong>
+            </div>
+        </div>
+        <div class="grid-item1">
+            <img src="/images/grid33.jpeg" alt="image33" >
+            <div class="gridbox1" style="background-color: rgba(0,0,0,0.5);text-align: left;">
+                <strong class="'poppins-bold">Review Hotel Services Worldwide</strong>
+            </div>
+        </div>
+    <div class="grid-item1">
+            <img src="/images/grid34.jpeg" alt="image34">
+            <div class="gridbox1" style="background-color: rgba(0,0,0,0.5);text-align: left;">
+                <strong class="poppins-bold">Follow the Lates Tour News</strong>
+            </div>
+        </div>
+    </div>
+    </section><br><br>
+    <section style="max-width:auto;max-height:auto;display: flex; justify-content: space-between;">
+        
+        <div style="max-width:auto;max-height:auto;display: flex; justify-content: flex-start; flex-direction: column;" >
+            <div class="contentblue">
+                <h3 class="poppins-bold" style="font-size: 1.25em;line-height: 1.75em;">Go Further With The EasySet24 App</h3>
+            </div>
+            <div class="poppins-regular"style="font-size: 0.875em;line-height: 1.32em;">Enjoy savings on chosen hotels and flights when you book through the EasySet24 website.</div>
+            <div class="poppins-regular" style="font-size: 0.875em;line-height: 1.32em;">Additionally, earn One Key Cash for every booking made through the app.</div>
+            <br>
+            <div class="contentgray poppins-regular" style="display: flex; justify-content: flex-start; flex-direction: column;">
+                Secured By Europe GTP
+            </div>
+        </div>
+       
+        <div style="display:flex;justify-content:flex-end;height:104px; width:185px; padding-top: 10px;">
+            <img src="/images/Auto layout scane  barcode.svg" alt="barcode" >
+        </div>
+    </div>
+    </section><br><br>
+    
+    <footer class="poppins-regular">
+        <div style="max-width:100%;max-height:fit-content;">
+        <div class="abovefooter">
+            <div>
+            <ul class="Styles">
+                <li><strong>About Us</strong></li>
+                <li>Our Story</li>
+                <li>Work with us</li>
+                <li>Press & Media</li>
+                <li>Privacy and Security</li>
+            </ul>
+        </div>
+        
+        <div>
+            <ul class="Styles poppins-regular">
+                <li><strong>We Offer</strong></li>
+                <li>Trip Sponsorship</li>
+                <li>Last Minute Flights</li>
+                <li>Best Deals</li>
+                <li>AI-Driven Search</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="Styles poppins-regular">
+                <li><strong>Head Quarters</strong></li>
+                <li>England</li>
+                <li>France</li>
+                <li>Canada</li>
+                <li>Iceland</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="Styles poppins-regular">
+                <li><strong>Travel Blogs</strong></li>
+                <li>Bali Travel Guide </li>
+                <li>Sri Lanka Travel Guide </li>
+                <li>Peru Travel Guide </li>
+                <li>Swiss Travel Guide</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="Styles poppins-regular">
+                <li><strong>Activities</strong></li>
+                <li>Tour Leading</li>
+                <li>Camping</li>
+                <li>Kayaking</li>
+                <li>Cruising and Sailing</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="Styles poppins-regular">
+                <li><strong>Services</strong></li>
+                <li>Report Error</li>
+                <li>Ask Online</li>
+                <li>Travel Insurance</li>
+            </ul>
+        </div>
+    </div>
+</div>
+        <br>
+        <div style="max-width:100%;max-height:fit-content;">
+        <div class="footer">
+        <div>
+            <img src="/images/Payment methods.svg" style="width:26.4vw;height:6vh;" alt="Payment Methods">
+        </div>
+        <div>
+            <img src="/images/Social Networks.svg"style="width:14vw;height:3vh;" alt="Social Networks">
+        </div>
+        <div class="formcontainer">
+            <div>
+        </div>
+            <div>
+                <input type="Email" placeholder="Email" style="border-radius: 0.625em;width:20vw;height:6.5vh;">
+            </div>
+            <div>
+                <input type="submit" value="Subscribe" style="background-color: #07689F;color:#efefef;margin-left: 0.625em;width:6vw;height:6.5vh;">
+            </div>
+        </div>
+    </div>
+</div>
+<div style="max-width:100%;max-height:fit-content;">
+        <div class="greyfooter poppins-regular">
+            <img src="/images/Under the footer title.svg" style="width:93vw;height:8vh;" alt="Footer title">
+        </div>
+    </footer>
+</div>
+</body>
+</html>
